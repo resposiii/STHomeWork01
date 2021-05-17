@@ -1,9 +1,9 @@
 public class Student {
 
-    int ID;
-    String name;
-    String birDate;
-    String gender;
+    int ID;         //学生id
+    String name;    //姓名
+    String birDate; //出生日期
+    String gender;  //性别
 
     public Student(int ID, String name, String birDate, String gender) {
         this.ID = ID;

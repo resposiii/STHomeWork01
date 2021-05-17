@@ -5,7 +5,7 @@ public class StudentManager {
 
     static int id = 0;
 
-    public void startApp() {
+    public void startApp() {            //StudentManager中的APP方法
         ArrayList<Student> students = new ArrayList<>();
 
         while (true)
@@ -14,7 +14,7 @@ public class StudentManager {
             System.out.println("**********************************");
             System.out.println("*             1 插入             *");
             System.out.println("*             2 查找             *");
-            System.out.println("*             3 删除             *");
+            System.out.println("*             3 删除             *");//菜单
             System.out.println("*             4 修改             *");
             System.out.println("*             5 输出             *");
             System.out.println("*             6 退出             *");
@@ -59,7 +59,7 @@ public class StudentManager {
         }
 
     }
-    public static void addStudent(ArrayList<Student> arrayList) {
+    public static void addStudent(ArrayList<Student> arrayList) {  //添加学生信息
         String bitDate = null;
         Scanner sc = new Scanner(System.in);
         System.out.println("请输入姓名：");
@@ -82,7 +82,8 @@ public class StudentManager {
         System.out.println("请输入性别(0|1)：");
         String gender = sc.nextLine();
         Student student = new Student();
-        student.setID(id++);
+        //student.setID(id++);
+        student.setID(++id);        //id从1开始
         student.setName(name);
         student.setBirDate(bitDate);
         student.setGender(gender);
@@ -93,7 +94,7 @@ public class StudentManager {
 
     }
 
-    public static void deleteStudent(ArrayList<Student> arrayList){
+    public static void deleteStudent(ArrayList<Student> arrayList){   //删除学生信息
         if (arrayList.size()==0)
         {
             System.out.println("未查询到学生信息，请先添加学生信息！");
@@ -127,7 +128,7 @@ public class StudentManager {
 
     }
 
-    public static void findStudent(ArrayList<Student> arrayList){
+    public static void findStudent(ArrayList<Student> arrayList){    //查找学生信息
 
         if (arrayList.size()==0)
         {
@@ -156,7 +157,7 @@ public class StudentManager {
         }
     }
 
-    public static void updateStudent(ArrayList<Student> arrayList){
+    public static void updateStudent(ArrayList<Student> arrayList){   //更新学生信息
 
         if (arrayList.size()==0)
         {
@@ -209,7 +210,7 @@ public class StudentManager {
 
     }
 
-    public static void findAllStudent(ArrayList<Student> arrayList){
+    public static void findAllStudent(ArrayList<Student> arrayList){    //显示所有学生信息
         if (arrayList.size()==0)
         {
             System.out.println("未查询到学生信息，请先添加学生信息！");
